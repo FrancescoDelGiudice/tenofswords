@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   cursor: url('http://www.rw-designer.com/cursor-download.php?id=90885'), auto;
   font-family: 'MS Sans Serif';
