@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  cursor: url('http://www.rw-designer.com/cursor-download.php?id=90885'), auto;
+  font-family: 'MS Sans Serif';
+  letter-spacing: 0.001em;
+  font-size: 14px;
+  font-smooth: none;
+  margin:0 !important;
+}
+
+/**
+
+BBBBBBBBBBBBBBBBB                                              tttt
+B::::::::::::::::B                                          ttt:::t
+B::::::BBBBBB:::::B                                         t:::::t
+BB:::::B     B:::::B                                        t:::::t
+  B::::B     B:::::B   ooooooooooo      ooooooooooo   ttttttt:::::ttttttt
+  B::::B     B:::::B oo:::::::::::oo  oo:::::::::::oo t:::::::::::::::::t
+  B::::BBBBBB:::::B o:::::::::::::::oo:::::::::::::::ot:::::::::::::::::t
+  B:::::::::::::BB  o:::::ooooo:::::oo:::::ooooo:::::otttttt:::::::tttttt
+  B::::BBBBBB:::::B o::::o     o::::oo::::o     o::::o      t:::::t
+  B::::B     B:::::Bo::::o     o::::oo::::o     o::::o      t:::::t
+  B::::B     B:::::Bo::::o     o::::oo::::o     o::::o      t:::::t
+  B::::B     B:::::Bo::::o     o::::oo::::o     o::::o      t:::::t    tttttt
+BB:::::BBBBBB::::::Bo:::::ooooo:::::oo:::::ooooo:::::o      t::::::tttt:::::t
+B:::::::::::::::::B o:::::::::::::::oo:::::::::::::::o      tt::::::::::::::t
+B::::::::::::::::B   oo:::::::::::oo  oo:::::::::::oo         tt:::::::::::tt
+BBBBBBBBBBBBBBBBB      ooooooooooo      ooooooooooo             ttttttttttt
+
+
+
+*/
+
+#boot {
+  width: 100%;
+  z-index: 99;
+  position: fixed;
+  height: 100vh;
+  background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4989c596-7ba0-4e17-8b98-7c338208ab64/daobodr-7dc4c4b1-7bd3-4b50-87bb-c987e2c4dfb7.jpg/v1/fill/w_1231,h_649,q_70,strp/windows_98_remastered_startup_screen__4k_wallpaper_by_archi_techi_daobodr-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjE2MCIsInBhdGgiOiJcL2ZcLzQ5ODljNTk2LTdiYTAtNGUxNy04Yjk4LTdjMzM4MjA4YWI2NFwvZGFvYm9kci03ZGM0YzRiMS03YmQzLTRiNTAtODdiYi1jOTg3ZTJjNGRmYjcuanBnIiwid2lkdGgiOiI8PTQwOTYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.79KQdANpp8aaMRj99IcG2XE63yJ8608uZ9IfgP2yYrY');
+  background-position: center -25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1023px) {
+  #boot {
+    background-repeat: repeat-y;
+    background-size: contain;
+  }
+}
+
+#boot-ready {
+  width: 100%;
+  z-index: 98;
+  position: fixed;
+  height: 100vh;
+  background: #000;
+}
+
+.loading-bar {
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(
+    220deg,
+    rgba(85, 132, 187, 1),
+    rgba(202, 232, 251, 1),
+    rgba(85, 132, 187, 1)
+  );
+  background-size: 200% 100%;
+  bottom: 0;
+  left: 0;
+  animation: loading 3s ease forwards infinite;
+}
+@keyframes loading {
+  0% {
+    background-position: 0% 51%;
+  }
+  100% {
+    background-position: -200% 51%;
+  }
+}
+
+
+/**
+
+DDDDDDDDDDDDD                                             kkkkkkkk                    tttt
+D::::::::::::DDD                                          k::::::k                 ttt:::t
+D:::::::::::::::DD                                        k::::::k                 t:::::t
+DDD:::::DDDDD:::::D                                       k::::::k                 t:::::t
+  D:::::D    D:::::D     eeeeeeeeeeee        ssssssssss    k:::::k    kkkkkkkttttttt:::::ttttttt       ooooooooooo   ppppp   ppppppppp
+  D:::::D     D:::::D  ee::::::::::::ee    ss::::::::::s   k:::::k   k:::::k t:::::::::::::::::t     oo:::::::::::oo p::::ppp:::::::::p
+  D:::::D     D:::::D e::::::eeeee:::::eess:::::::::::::s  k:::::k  k:::::k  t:::::::::::::::::t    o:::::::::::::::op:::::::::::::::::p
+  D:::::D     D:::::De::::::e     e:::::es::::::ssss:::::s k:::::k k:::::k   tttttt:::::::tttttt    o:::::ooooo:::::opp::::::ppppp::::::p
+  D:::::D     D:::::De:::::::eeeee::::::e s:::::s  ssssss  k::::::k:::::k          t:::::t          o::::o     o::::o p:::::p     p:::::p
+  D:::::D     D:::::De:::::::::::::::::e    s::::::s       k:::::::::::k           t:::::t          o::::o     o::::o p:::::p     p:::::p
+  D:::::D     D:::::De::::::eeeeeeeeeee        s::::::s    k:::::::::::k           t:::::t          o::::o     o::::o p:::::p     p:::::p
+  D:::::D    D:::::D e:::::::e           ssssss   s:::::s  k::::::k:::::k          t:::::t    tttttto::::o     o::::o p:::::p    p::::::p
+DDD:::::DDDDD:::::D  e::::::::e          s:::::ssss::::::sk::::::k k:::::k         t::::::tttt:::::to:::::ooooo:::::o p:::::ppppp:::::::p
+D:::::::::::::::DD    e::::::::eeeeeeee  s::::::::::::::s k::::::k  k:::::k        tt::::::::::::::to:::::::::::::::o p::::::::::::::::p
+D::::::::::::DDD       ee:::::::::::::e   s:::::::::::ss  k::::::k   k:::::k         tt:::::::::::tt oo:::::::::::oo  p::::::::::::::pp
+DDDDDDDDDDDDD            eeeeeeeeeeeeee    sssssssssss    kkkkkkkk    kkkkkkk          ttttttttttt     ooooooooooo    p::::::pppppppp
+                                                                                                                      p:::::p
+                                                                                                                      p:::::p
+                                                                                                                     p:::::::p
+                                                                                                                     p:::::::p
+                                                                                                                     p:::::::p
+                                                                                                                     ppppppppp
+*/
+
+strong {
+  font-weight: bold;
+}
+
+#desktop {
+  background: teal;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+#toolbar {
+  background: #c0c0c0;
+  height: 35px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 2px solid #fff;
+}
+#toolbar .toolbar-start-menu {
+  float: left;
+}
+#toolbar .toolbar-start-menu .start-button {
+  background: url('https://win98icons.alexmeub.com/icons/png/windows-0.png')
+    no-repeat 2px center / 24px;
+  padding-left: 28px;
+  padding-right: 5px;
+  height: 29px;
+  margin: 2px 3px;
+  font-weight: bold;
+  border: 2px solid #7c7c7c;
+  border-top-color: #fff;
+  border-left-color: #fff;
+}
+#toolbar .toolbar-start-menu .start-button:hover {
+  background-color: #a7a7a7;
+}
+#toolbar .toolbar-start-menu .start-menu-wrapper {
+  border: 2px solid #7c7c7c;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  background: #c0c0c0;
+  position: fixed;
+  left: 2px;
+  bottom: 33px;
+  width: 190px;
+  min-height: 200px;
+}
+#toolbar .toolbar-start-menu .start-menu-wrapper .start-menu-title {
+  height: 100%;
+  padding: 5px 5px;
+  background: linear-gradient(90deg, #00007b 0%, #00f 5%, #00007b 100%);
+  color: #fff;
+  width: 40px;
+  float: left;
+  text-transform: uppercase;
+  font-size: 20px;
+  position: absolute;
+}
+#toolbar .toolbar-start-menu .start-menu-wrapper .start-menu-title span {
+  transform: rotate(-90deg);
+  transform-origin: left 0;
+  position: absolute;
+  left: 10px;
+  bottom: -10px;
+}
+#toolbar .toolbar-start-menu .start-menu-wrapper .start-menu {
+  margin-left: 40px;
+}
+#toolbar .toolbar-separator {
+  width: 2px;
+  height: 26px;
+  margin-top: 2px;
+  background: #797979;
+  float: left;
+  border-right: 1px solid #fff;
+}
+#toolbar .toolbar-left {
+  float: left;
+  padding: 0 5px;
+}
+#toolbar .toolbar-icon {
+  background: no-repeat center / auto 20px;
+  width: 25px;
+  height: 25px;
+  border: none;
+  margin-top: 3px;
+  margin: 3px 2px;
+}
+#toolbar .toolbar-icon.ie {
+  background-image: url('https://win98icons.alexmeub.com/icons/png/msie1-4.png');
+}
+#toolbar .toolbar-icon.outlook {
+  background-image: url('https://win98icons.alexmeub.com/icons/png/outlook_express-0.png');
+}
+#toolbar .toolbar-icon.desktop {
+  background-image: url('https://win98icons.alexmeub.com/icons/png/desktop-4.png');
+}
+#toolbar .toolbar-icon.channels {
+  background-image: url('https://win98icons.alexmeub.com/icons/png/channels-5.png');
+}
+#toolbar .toolbar-right {
+  float: right;
+  margin: 2px 3px;
+  height: 29px;
+  border: 2px solid #7c7c7c;
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+}
+#toolbar .toolbar-right .time {
+  padding: 6px 10px;
+}
+.desktop-icons .desktop-icon {
+  width: 115px;
+  height: 100px;
+  color: #fff;
+  text-align: center;
+  background: no-repeat center top;
+  padding-top: 55px;
+  margin: 10px;
+}
+.desktop-icons .desktop-icon.bandcamp-icon {
+  background-image: url('https://win98icons.alexmeub.com/icons/png/computer_sound-4.png');
+}
+.desktop-icons .desktop-icon.album-icon {
+  background-image: url('https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png');
+}
+.desktop-icons .desktop-icon.instagram-icon {
+  background-image: url('https://win98icons.alexmeub.com/icons/png/network_cool_two_pcs-0.png');
+}
+.desktop-icons .desktop-icon.youtube-icon {
+  background-image: url('https://win98icons.alexmeub.com/icons/png/netshow_notransm-2.png');
+}
+.desktop-icons .desktop-icon.play-icon {
+  background-image: url('https://win98icons.alexmeub.com/icons/png/cd_audio_cd_a-4.png');
+}
+
+.start-bar-window {
+  float: left;
+  padding: 0 10px 0 6px;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  box-shadow: inset 1px 1px grey;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAG0lEQVQYV2M8cODAf3t7ewbG/////z948CADAFuqCj64BtLKAAAAAElFTkSuQmCC');
+  vertical-align: middle;
+  height: 22px;
+  line-height: 22px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  font-family: Arial;
+  font-weight: 400;
+  color: #000;
+}
+
+
+
+
+
