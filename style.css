@@ -3,8 +3,9 @@
 }
 
 html {
-  height: 100%;
-}
+  overflow: hidden;
+  width: 100%;
+  }
 
 body {
   cursor: url('http://www.rw-designer.com/cursor-download.php?id=90885'), auto;
@@ -13,6 +14,10 @@ body {
   font-size: 14px;
   font-smooth: none;
   margin:0 !important;
+  height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 /**
