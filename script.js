@@ -11,7 +11,10 @@ window.addEventListener('load', () => {
   playButton.addEventListener('click', () => {
     playAndPauseAudio()
   })
+  window.scrollTo(0, 1)
 })
+
+window.scrollTo(0, 1)
 function playAndPauseAudio () {
   const audio = document.getElementById('audio')
   if (audio.paused) {
