@@ -139,11 +139,15 @@ strong {
   left: 0;
   border-top: 2px solid #fff;
 }
+
+/*
+Try to fix height bug on mobile
 @media screen and (max-width:1023px) {
   #toolbar {
     height: calc(35px + (100vh - 100%));
   }
-}
+} */
+
 #toolbar .toolbar-start-menu {
   float: left;
 }
