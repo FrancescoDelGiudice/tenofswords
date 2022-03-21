@@ -141,7 +141,7 @@ strong {
 }
 @media screen and (max-width:1023px) {
   #toolbar {
-    height: calc(10px + (100vh - 100%));
+    height: calc(35px + (100vh - 100%));
   }
 }
 #toolbar .toolbar-start-menu {
