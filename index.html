@@ -48,6 +48,7 @@
     </div>
     <div id="desktop">
       <div
+        id="image-container"
         class="absolute top-0 left-0 w-full h-full flex justify-center items-center"
       >
         <div class="mt-96 ml-20 lg:m-auto relative z-10">
@@ -64,48 +65,58 @@
       <div class="desktop-icons">
         <div class="desktop-icon bandcamp-icon relative" title="Bandcamp">
           <a
-            href="https://sw10rds.bandcamp.com/"
-            title="Link to Bandcamp"
-            class="absolute top-0 left-0 w-full h-full"
             target="_blank"
+            title="Link to Bandcamp"
+            href="https://sw10rds.bandcamp.com/"
+            class="absolute top-0 left-0 w-full h-full"
+            onclick="return false"
+            ondblclick="location=this.href"
           ></a>
           Bandcamp
         </div>
 
         <div class="desktop-icon album-icon relative" title="Latest album">
           <a
-            href="https://veinte33records.bandcamp.com/album/impressions-from-a-tragedy-never-lived"
+            target="_blank"
             title="Link to my latest album"
             class="absolute top-0 left-0 w-full h-full"
-            target="_blank"
+            href="https://veinte33records.bandcamp.com/album/impressions-from-a-tragedy-never-lived"
+            onclick="return false"
+            ondblclick="location=this.href"
           ></a>
           Latest album
         </div>
 
         <div class="desktop-icon instagram-icon relative" title="Instagram">
           <a
-            href="https://www.instagram.com/ofthejudge/"
+            target="_blank"
             title="Link to Instagram"
             class="absolute top-0 left-0 w-full h-full"
-            target="_blank"
+            href="https://www.instagram.com/ofthejudge/"
+            onclick="return false"
+            ondblclick="location=this.href"
           ></a>
           Instagram
         </div>
 
         <div class="desktop-icon youtube-icon relative" title="Youtube">
           <a
-            href="https://www.youtube.com/channel/UCnu8WnpKYJN5cLrNRqb3lyA"
+            target="_blank"
             title="Link to Youtube"
             class="absolute top-0 left-0 w-full h-full"
-            target="_blank"
+            href="https://www.youtube.com/channel/UCnu8WnpKYJN5cLrNRqb3lyA"
+            onclick="return false"
+            ondblclick="location=this.href"
           ></a>
           Youtube
         </div>
         <div
           aria-button
           id="play-and-pause"
-          class="desktop-icon play-icon relative"
           title="Play and Pause"
+          class="desktop-icon play-icon relative"
+          onclick="return false"
+          ondblclick="location=this.href"
         >
           Play and Pause <br />Demo
         </div>
@@ -117,14 +128,57 @@
 
       <div id="toolbar">
         <div class="toolbar-start-menu">
-          <div id="start-button" class="start-button relative">
-            <a
-              href="https://sw10rds.bandcamp.com/"
-              title="Link to Bandcamp"
-              class="absolute top-0 left-0 w-full h-full"
-              target="_blank"
-            ></a>
+          <div aria-button id="start-button" class="start-button">
             Start
+          </div>
+
+          <div id="start-menu" class="hidden start-menu-wrapper">
+            <div class="start-menu-title">
+              <span><strong>10</strong><i>of</i><strong>SWORDS</strong></span>
+            </div>
+
+            <div class="start-menu">
+              <div
+                aria-button
+                id="new-single"
+                class="start-menu-link cursor-pointer"
+              >
+                New single
+              </div>
+              <div
+                aria-button
+                id="bandcamp"
+                class="relative start-menu-link cursor-pointer"
+              >
+                <a
+                  target="_blank"
+                  title="Link to Bandcamp"
+                  href="https://sw10rds.bandcamp.com/"
+                  class="absolute top-0 left-0 w-full h-full cursor-pointer"
+                ></a>
+                Bandcamp
+              </div>
+              <div
+                aria-button
+                id="instagram"
+                class="relative start-menu-link cursor-pointer"
+              >
+                <a
+                  target="_blank"
+                  title="Link to Instagram"
+                  class="absolute top-0 left-0 w-full h-full cursor-pointer"
+                  href="https://www.instagram.com/ofthejudge/"
+                ></a>
+                Instagram
+              </div>
+              <div
+                aria-button
+                id="shutdown-button"
+                class="start-menu-link cursor-pointer"
+              >
+                Shut down
+              </div>
+            </div>
           </div>
         </div>
         <div class="toolbar-separator"></div>
