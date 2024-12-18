@@ -49,28 +49,41 @@
     <div id="desktop">
       <div
         id="image-container"
-        class="absolute top-0 left-0 w-full h-full flex justify-center items-center"
+        class="win95 absolute top-0 left-0 w-full h-full flex justify-center items-center z-0"
       >
         <div class="mt-96 ml-20 lg:m-auto relative z-10">
-          <a
-            class="absolute top-0 left-0 w-full h-full"
-            title="Link to latest song"
-            href=""
-            target="_blank"
-          >
-          </a>
-          <img src="error.png" alt="Fake error new song" />
+          <div class="dialog" style="max-width: 445px">
+            <div class="header">
+              <div class="x"></div>
+              <div class="title">SW10RDS</div>
+            </div>
+            <div class="body">
+              <div class="text" style="text-align: inherit">
+                <p>Listen to my latest release</p>
+              </div>
+              <div class="buttons">
+                <div class="button button-ok relative">
+                  <a
+                    target="_blank"
+                    title="Link to Bandcamp"
+                    href="https://sw10rds.bandcamp.com/"
+                    class="absolute top-0 left-0 w-full h-full"
+                  ></a>
+                  <div class="inner">OK</div>
+                </div>
+                <div class="button button-cancel">Cancel</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="desktop-icons">
+      <div class="desktop-icons z-10 relative">
         <div class="desktop-icon bandcamp-icon relative" title="Bandcamp">
           <a
             target="_blank"
             title="Link to Bandcamp"
             href="https://sw10rds.bandcamp.com/"
             class="absolute top-0 left-0 w-full h-full"
-            onclick="return false"
-            ondblclick="location=this.href"
           ></a>
           Bandcamp
         </div>
@@ -80,9 +93,7 @@
             target="_blank"
             title="Link to my latest album"
             class="absolute top-0 left-0 w-full h-full"
-            href="https://veinte33records.bandcamp.com/album/impressions-from-a-tragedy-never-lived"
-            onclick="return false"
-            ondblclick="location=this.href"
+            href="https://sw10rds.bandcamp.com/"
           ></a>
           Latest album
         </div>
@@ -93,8 +104,6 @@
             title="Link to Instagram"
             class="absolute top-0 left-0 w-full h-full"
             href="https://www.instagram.com/ofthejudge/"
-            onclick="return false"
-            ondblclick="location=this.href"
           ></a>
           Instagram
         </div>
@@ -105,8 +114,6 @@
             title="Link to Youtube"
             class="absolute top-0 left-0 w-full h-full"
             href="https://www.youtube.com/channel/UCnu8WnpKYJN5cLrNRqb3lyA"
-            onclick="return false"
-            ondblclick="location=this.href"
           ></a>
           Youtube
         </div>
@@ -115,22 +122,18 @@
           id="play-and-pause"
           title="Play and Pause"
           class="desktop-icon play-icon relative"
-          onclick="return false"
-          ondblclick="location=this.href"
         >
           Play and Pause <br />Demo
         </div>
       </div>
 
-      <audio loop autplay controls id="audio" style="display:none;">
+      <audio loop autplay controls id="audio" style="display: none">
         <source src="townhall.wav" type="audio/wav" />
       </audio>
 
       <div id="toolbar">
         <div class="toolbar-start-menu">
-          <div aria-button id="start-button" class="start-button">
-            Start
-          </div>
+          <div aria-button id="start-button" class="start-button">Start</div>
 
           <div id="start-menu" class="hidden start-menu-wrapper">
             <div class="start-menu-title">
@@ -141,9 +144,15 @@
               <div
                 aria-button
                 id="new-single"
-                class="start-menu-link cursor-pointer"
+                class="relative start-menu-link cursor-pointer"
               >
-                New single
+                <a
+                  target="_blank"
+                  title="Link to Bandcamp"
+                  href="https://sw10rds.bandcamp.com/"
+                  class="absolute top-0 left-0 w-full h-full cursor-pointer"
+                ></a>
+                Latest release
               </div>
               <div
                 aria-button
@@ -184,10 +193,38 @@
         <div class="toolbar-separator"></div>
 
         <div class="toolbar-left">
-          <button class="toolbar-icon ie"></button>
-          <button class="toolbar-icon outlook"></button>
-          <button class="toolbar-icon desktop"></button>
-          <button class="toolbar-icon channels"></button>
+          <button class="toolbar-icon relative ie">
+            <a
+              target="_blank"
+              title="Link to Browser"
+              class="absolute top-0 left-0 w-full h-full cursor-pointer"
+              href="https://www.google.com"
+            ></a>
+          </button>
+          <button class="toolbar-icon relative outlook">
+            <a
+              target="_blank"
+              title="Write an email"
+              class="absolute top-0 left-0 w-full h-full cursor-pointer"
+              href="mailto:xofsw10rds@gmail.com"
+            ></a>
+          </button>
+          <button class="toolbar-icon relative desktop">
+            <a
+              target="_blank"
+              title="Link to Bandcamp"
+              href="https://sw10rds.bandcamp.com/"
+              class="absolute top-0 left-0 w-full h-full cursor-pointer"
+            ></a>
+          </button>
+          <button class="toolbar-icon relative channels">
+            <a
+              target="_blank"
+              title="Link to Bandcamp"
+              href="https://sw10rds.bandcamp.com/"
+              class="absolute top-0 left-0 w-full h-full cursor-pointer"
+            ></a>
+          </button>
         </div>
 
         <div class="toolbar-separator"></div>
